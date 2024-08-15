@@ -1,0 +1,214 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #23242a;
+}
+.game{
+  max-width: calc(3 *100px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  color: #ff2770;
+}
+.output{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.board{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+}
+.cell{
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid #cccccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.cell:hover{
+  background-color: #f0f0f0;
+}
+.reset-button{
+  padding: 5px;
+  height: 40px;
+  width: 110px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.reset-button:hover{
+  background-color: #8f8f8f;
+}
+
+/* login page design */
+
+.login-container{
+    position: relative;
+    height: 420px;
+    width: 380px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.login-container::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 380px;
+  height: 420px;
+  background-image: linear-gradient(0deg,transparent,
+  transparent,#45f3ff,#45f3ff,#45f3ff);
+  z-index: 1;
+  animation: animi 6s linear infinite;
+  transform-origin:bottom right;
+}
+.login-container::after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background-image: linear-gradient(0deg,transparent,
+  transparent,#45f3ff,#45f3ff,#45f3ff);
+  z-index: 1;
+  animation: animi 6s linear infinite;
+  transform-origin:bottom right;
+  animation-delay: -3s;
+}
+@keyframes animi{
+  0%{
+      transform:rotate(0deg)
+  }
+  100%{
+      transform:rotate(360deg)
+  }
+}
+
+.borderline::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 380px;
+  height: 420px;
+  background-image: linear-gradient(0deg,transparent,
+  transparent,#ff2770,#ff2770,#ff2770);
+  z-index: 1;
+  animation: animi 6s linear infinite;
+  transform-origin:bottom right;
+  animation-delay: -1.5s;
+}
+.borderline::after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 380px;
+  height: 420px;
+  background-image: linear-gradient(0deg,transparent,
+  transparent,#ff2770,#ff2770,#ff2770);
+  z-index: 1;
+  animation: animi 6s linear infinite;
+  transform-origin:bottom right;
+  animation-delay: -10s;
+}
+.login-container form{
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 50px 40px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.login-container form h2{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.login-container form .inputbox{
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.login-container form .inputbox input{
+  position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #32342a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.login-container form .inputbox span{
+  position: absolute;
+  left: 0%;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.login-container form .inputbox input:valid ~ span,
+.login-container form .inputbox input:focus ~ span{
+    color: white;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.login-container form .inputbox i{
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  pointer-events: none;
+  transition: 0.5s;
+}
+/* .login-container form .inputbox input:valid ~ i , */
+.login-container form .inputbox input:focus ~ i{
+   height: 44px;
+}
+
+.btn
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
